@@ -1,0 +1,243 @@
+body{
+	box-sizing: border-box;
+	margin: 20px 24px;
+	padding: 0px;
+	background-color:#DFE8DC;
+	font-family: arial;
+}
+body ul{
+	display: inline;
+	list-style-type: none;
+}
+body a{
+	text-decoration: none;
+}
+div{
+	background-color: ghostwhite;
+	border: 1px solid #BBB8B7;
+}
+div:hover{
+	box-shadow: 5px 5px 5px grey;
+}
+:is(#sec1,#sec2,#sec3,#sec4,#sec5,#sec6){
+	display: grid;
+}
+:is(#sec2,#sec4,#sec5,#sec6){
+	margin-top: 20px;
+}
+:is(#sec2,#sec3,#sec5){
+	grid-gap: 10px;
+}
+:is(#sec1,#membership,#promembership,#sec3,#secondmain) :is(h1,h5,h3,p,h2,p,a){
+	color:#303030;
+}
+#sec1{
+	grid-gap: 5px;
+	grid-template-rows: 40px;
+	grid-template-columns:repeat(4, 364px);
+	grid-template-areas: "home about services contact";
+}
+#sec1 div{
+	text-align: center;
+	padding-top: 10px;
+}
+#sec2{
+	grid-template-rows:repeat(2, 1fr);
+	grid-template-columns:repeat(4, 360px);
+	grid-template-areas:"mainimg mainimg mainimg membership" 
+						"mainimg mainimg mainimg promembership";
+}
+#sec3{
+	margin-top: 10px;
+	grid-template-rows:150px;
+	grid-template-columns:repeat(4, 360px);
+	grid-template-areas:"analytics marketing development support";
+}
+#sec4{
+	grid-template-rows: 400px;
+	grid-template-columns: 1fr;
+	grid-template-areas: "secondmain";
+}
+#sec5{
+	grid-template-rows: repeat(2, 300px);
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-areas: "img1 img2 img3 img4 img5 img6" "img7 img8 img9 img10 img11 img12";
+}
+#sec6{
+	grid-template-rows: 80px;
+	grid-template-columns: 1fr;
+	grid-template-areas: "footer";
+}
+#home{
+	grid-area: home;
+}
+#about{
+	grid-area: about;
+}
+#services{
+	grid-area: services;	
+}
+#contact{
+	grid-area: contact;
+}
+#mainimg{
+	grid-area: mainimg;
+	background-image: url(lap.jpg);
+	color: white;
+}
+#mainimg h1{
+	font-size: 40px;
+	padding: 140px 30px;
+}
+:is(#mainimg,#secondmain) p{
+	text-align: justify;
+}
+#mainimg p{
+	margin: -155px 30px;
+}
+#mainimg li{
+	margin: 165px 40px;
+}
+#mainimg a{
+	color: white;
+	padding: 5px 15px;
+	background-color:#292929;
+	font-size: 15px;
+}
+#mainimg a:hover{
+	background-color:#E8EFE6;
+	color: black;
+}
+#membership{
+	grid-area: membership;
+}
+#promembership{
+	grid-area: promembership;
+}
+:is(#membership,#promembership,#sec3) :is(h1,h3,h5,p,ul){
+	text-align: center;
+}
+:is(#membership,#promembership) h5{
+	padding-top: 25px;
+}
+:is(#membership,#promembership) h3{
+	font-size: 30px;
+	font-weight: lighter;
+}
+:is(#membership,#promembership) li{
+	margin-top: -15px;
+}
+:is(#membership,#promembership,#secondmain) a{
+	background-color: #303030;
+	color: ghostwhite;
+	padding: 7px 14px;
+}
+:is(#membership,#promembership,#secondmain) a:hover{
+	background-color:#DFDFDF;
+	color:#303030;
+}
+:is(#membership,#promembership) a{
+	font-size: 15px;	
+}
+#analytics{
+	grid-area: analytics;
+}
+#marketing{
+	grid-area: marketing;
+}
+#development{
+	grid-area: development;
+}
+#support{
+	grid-area: support;
+}
+:is(#analytics,#marketing,#development,#support) h1{
+	font-size: 45px;
+	margin-top: 17px;
+}
+:is(#analytics,#marketing,#development,#support) h5{
+	margin-top: -20px;
+}
+:is(#analytics,#marketing,#development,#support) p{
+	margin-top: -10px;
+	font-size: 13px;
+}
+#secondmain{
+	grid-area: secondmain;
+}
+#secondmain img{
+	margin-top: 30px;
+	margin-left: 40px;
+}
+#secondmain h2{
+	float: right;
+	margin-right: 580px;
+	margin-top: 60px;
+}
+:is(#secondmain) :is(p,li){
+	margin-left: 580px;
+}
+#secondmain p{
+	margin-top: -260px;
+	line-height: 1.5;
+	max-width: 750px;
+}
+:is(#mainimg,#img1,#img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12){
+	background-position: 0% 80%;
+	background-size: cover;
+}
+#img1{
+	grid-area: img1;
+	background-image: url(img1.jpg);
+}
+#img2{
+	grid-area: img2;
+	background-image: url(img2.jpg);
+}
+#img3{
+	grid-area: img3;
+	background-image: url(img3.jpg);
+}
+#img4{
+	grid-area: img4;
+	background-image: url(img4.jpg);
+}
+#img5{
+	grid-area: img5;
+	background-image: url(img5.jpg);
+}
+#img6{
+	grid-area: img6;
+	background-image: url(img6.jpg);
+}
+#img7{
+	grid-area: img7;
+	background-image: url(img7.jpg);
+}
+#img8{
+	grid-area: img8;
+	background-image: url(img8.jpg);
+}
+#img9{
+	grid-area: img9;
+	background-image: url(img9.jpg);
+}
+#img10{
+	grid-area: img10;
+	background-image: url(img10.jpg);
+}
+#img11{
+	grid-area: img11;
+	background-image: url(img11.jpg);
+}
+#img12{
+	grid-area: img12;
+	background-image: url(img12.jpg);
+}
+#footer{
+	grid-area: footer;
+	background-color: #303030;
+	text-align: center;
+	color: ghostwhite;
+	padding-top: 30px;
+}
